@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>mensaje</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="girasol.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="card">
+        <div class="card-body" id="card-body1">
+            <form onsubmit="mostrarNombre(event)" id="mi-formulario">
+                <input type="text" class="form-control" id="nombre" placeholder="Escribe tu nombre" name="nombre"
+                    required>
+                <p id="espacioVacio"></p>
+            </form>
+        </div>
+        <div id="girasol-container">
+            <img id="girasol" src="girasol.png" alt="Girasol">
+            <div id="mensaje"></div>
+        </div>
+
+        <div class="card-body" id="card-body2">
+            <p class="card-text" id="mensaje2"></p>
+            <p class="card-text" id="mensaje3"></p>
+        </div>
+
+        <button class="btn btn-primary" id="btn" onclick="mostrarMensaje()">Ingresar</button>
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+    <script src="boton.js"></script>
+</body>
+
+</html>

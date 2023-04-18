@@ -1,0 +1,118 @@
+#girasol-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+#girasol {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-image: url(fondo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+#mensaje {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 2px #000;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#espacioVacio {
+    animation: espacioVacio 3s linear infinite;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: red;
+}
+
+.card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    max-width: 43%;
+    /* max-height: 18%; */
+    transform: translate(0%, 3%);
+}
+
+.card-text {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    text-shadow: 2px 2px 2px rgb(133 133 133);
+}
+
+#girasol:hover+#mensaje {
+    opacity: 1;
+}
+
+#girasol:hover {
+    animation: girarInfinitamente 10s linear infinite;
+}
+
+@keyframes girarInfinitamente {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes espacioVacio {
+    from {
+        transform: translateY(-3);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+
+}
+
+@media (max-width: 1170px) {
+    body {
+        background-image: url(fondo.jpg);
+        background-repeat: no-repeat;
+        background-position: unset;
+        background-size: 400%;
+        height: 2532px;
+        width: 1170px;
+    }
+
+    .card {
+        height: 31%;
+        margin-top: 74%;
+    }
+
+    #card-body2 {
+        display: contents;
+    }
+
+    #btn {
+        padding: 9%;
+        font-size: 341%;
+        margin-top: 25px;
+    }
+
+}
